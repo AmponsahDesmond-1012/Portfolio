@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Amponsah Desmond | Data Analyst Portfolio</title>
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      color: #e0e0e0;
+      scroll-behavior: smooth;
+      background-color: #0a192f;
+    }
+
+    /* Navbar */
+    .navbar {
+      background-color: #0a192f;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+    }
+    .navbar-brand {
+      font-weight: bold;
+      color: #ffb400 !important;
+    }
+    .nav-link {
+      color: #e0e0e0 !important;
+      margin-right: 20px;
+      transition: 0.3s;
+    }
+    .nav-link:hover {
+      color: #ffb400 !important;
+    }
+
+    /* Buttons */
+    .btn-primary {
+      background-color: #ffb400;
+      border: none;
+      padding: 12px 30px;
+      border-radius: 30px;
+      color: #0a192f;
+      font-weight: 600;
+    }
+    .btn-primary:hover {
+      background-color: #d99a00;
+      color: #fff;
+    }
+    .btn-download {
+      background-color: transparent;
+      color: #ffb400;
+      border: 2px solid #ffb400;
+      padding: 12px 30px;
+      border-radius: 30px;
+      transition: 0.3s;
+      margin-left: 10px;
+    }
+    .btn-download:hover {
+      background-color: #ffb400;
+      color: #0a192f;
+    }
+
+    /* Hero Section */
+    .hero {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 100px 0;
+      background: linear-gradient(120deg, #0a192f, #112240);
+    }
+    .hero-content {
+      max-width: 550px;
+    }
+    .hero h1 {
+      font-weight: 700;
+      margin-bottom: 20px;
+      color: #ffb400;
+    }
+    .hero p {
+      font-size: 1.1rem;
+      color: #e0e0e0;
+      margin-bottom: 25px;
+    }
+
+    /* Profile Image */
+    .profile-img {
+      width: 220px;
+      height: 220px;
+      object-fit: cover;
+      border-radius: 10px;
+      border: 5px solid #ffb400;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    }
+
+    /* Data Gallery */
+    .data-gallery {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 25px;
+      margin-top: 40px;
+    }
+    .data-gallery img {
+      width: 270px;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+      transition: transform 0.3s;
+    }
+    .data-gallery img:hover {
+      transform: scale(1.05);
+    }
+
+    /* About Section */
+    #about {
+      padding: 80px 0;
+      background: #112240;
+    }
+    #about h2 {
+      font-weight: 700;
+      color: #ffb400;
+      margin-bottom: 40px;
+    }
+    #about p {
+      max-width: 700px;
+      margin: 0 auto;
+      line-height: 1.7;
+      color: #e0e0e0;
+    }
+
+    /* Skills Section */
+    #skills {
+      background: #0a192f;
+      padding: 80px 0;
+    }
+    #skills h2 {
+      font-weight: 700;
+      color: #ffb400;
+      margin-bottom: 40px;
+    }
+    .skill-box {
+      background: #112240;
+      border-radius: 10px;
+      padding: 25px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+      transition: transform 0.3s;
+    }
+    .skill-box:hover {
+      transform: translateY(-5px);
+    }
+
+    /* Tool Logos */
+    .tool-logos {
+      margin-top: 50px;
+    }
+    .tool-logos img {
+      width: 120px;
+      height: 120px;
+      margin: 20px;
+      object-fit: contain;
+      transition: transform 0.3s;
+      filter: drop-shadow(0 2px 3px rgba(255,180,0,0.2));
+    }
+    .tool-logos img:hover {
+      transform: scale(1.2);
+    }
+
+    /* Projects Section */
+    #projects {
+      background: #112240;
+      padding: 80px 0;
+    }
+    #projects h2 {
+      color: #ffb400;
+      font-weight: 700;
+      margin-bottom: 40px;
+    }
+    .project-card {
+      background: #0a192f;
+      border-radius: 15px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+      text-align: center;
+      transition: transform 0.3s, box-shadow 0.3s;
+      overflow: hidden;
+      border: 2px solid #1e2a47;
+      max-width: 500px;
+      margin: 0 auto;
+    }
+    .project-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 18px rgba(255,180,0,0.3);
+    }
+    .project-card img {
+      width: 100%;
+      height: 100px;
+      border-bottom: 3px solid #ffb400;
+      object-fit: cover;
+    }
+    .project-card h5 {
+      color: #ffb400;
+      margin-top: 15px;
+      font-weight: 700;
+    }
+    .project-card p {
+      color: #d0d0d0;
+      padding: 0 20px;
+      font-size: 0.95rem;
+    }
+    .btn-view {
+      display: inline-block;
+      margin: 15px 0 20px;
+      background-color: #ffb400;
+      color: #0a192f;
+      padding: 10px 25px;
+      border-radius: 30px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: 0.3s;
+    }
+    .btn-view:hover {
+      background-color: #d99a00;
+      color: #fff;
+    }
+
+    /* Contact Section */
+    #contact {
+      padding: 80px 0;
+      background: #0a192f;
+    }
+    #contact h2 {
+      color: #ffb400;
+      margin-bottom: 30px;
+      font-weight: 800;
+    }
+    #contact p {
+      color: #e0e0e0;
+    }
+    #contact img {
+      width: 45px;
+      height: 45px;
+      transition: transform 0.3s;
+      border-radius: 50%;
+    }
+    #contact img:hover {
+      transform: scale(1.1);
+    }
+
+    /* Footer */
+    footer {
+      background: #000;
+      color: #ffb400;
+      text-align: center;
+      padding: 20px 0;
+      margin-top: 40px;
+      font-weight: 500;
+    }
+
+    @media (max-width: 992px) {
+      .hero {
+        flex-direction: column-reverse;
+        text-align: center;
+      }
+      .profile-img {
+        width: 170px;
+        height: 170px;
+      }
+      .btn-download {
+        display: block;
+        margin: 10px auto 0;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg fixed-top">
+    <div class="container">
+      <a class="navbar-brand" href="#">Welcome</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+        <ul class="navbar-nav align-items-lg-center">
+          <li class="nav-item"><a class="nav-link active" href="#home">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
+          <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section id="home" class="hero mt-5 pt-5">
+    <div class="container d-flex flex-lg-row flex-column align-items-center justify-content-between">
+      <div class="hero-content text-center text-lg-start">
+        <h1>Hi, I'm <span style="color:#ffb400;">Amponsah Desmond</span></h1>
+        <p>A passionate Data Analyst dedicated to transforming complex data into actionable insights, driving informed decisions, and promoting a culture of excellence through analytics and research.</p>
+        <div>
+          <a href="#contact" class="btn btn-primary">Contact Me</a>
+          <a href="files/Desmond_CV.pdf" class="btn-download" download>Download CV</a>
+        </div>
+      </div>
+      <img src="images/PROFILE.jpeg" alt="Desmond Photo" class="img-fluid profile-img">
+    </div>
+
+    <!-- Data Images -->
+    <div class="data-gallery mt-5">
+      <img src="images/front 1.jpeg" alt="Data Analysis 1">
+      <img src="images/front 2.jpeg" alt="Data Analysis 2">
+      <img src="images/front 3.jpeg" alt="Data Analysis 3">
+      <img src="images/front 4.jpeg" alt="Data Analysis 4">
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="text-center">
+    <div class="container">
+      <h2>ABOUT</h2>
+      <p>Dedicated and passionate data analyst and quality-focused professional with a firm belief in the transformative power of data-driven insights. I am committed to empowering organizations and teams with analytical knowledge, problem-solving skills, and ethical values necessary to thrive in a data-centric world.</p>
+    </div>
+  </section>
+
+  <!-- Skills Section -->
+  <section id="skills">
+    <div class="container text-center">
+      <h2>SKILLS & TOOLS</h2>
+      <div class="row g-4">
+        <div class="col-md-4">
+          <div class="skill-box">
+            <h5 style="color:#ffb400;">Data Analysis & Visualization</h5>
+            <p>Proficient in R, STATA, and SPSS for data cleaning, analysis, and visualization.</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="skill-box">
+            <h5 style="color:#ffb400;">Statistical Modelling</h5>
+            <p>Experienced in Multivariate and Bayesian Analysis, Biostatistics, and Time Series Modelling.</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="skill-box">
+            <h5 style="color:#ffb400;">Tools & Software</h5>
+            <p>RStudio, Microsoft Office Suite, LaTeX, Power BI, SQL, and Visual Studio.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="tool-logos d-flex justify-content-center flex-wrap mt-5">
+        <img src="images/R.png" alt="R">
+        <img src="images/SQL.jpeg" alt="SQL">
+        <img src="images/SPSS.jpeg" alt="SPSS">
+        <img src="images/POWER BI.jpeg" alt="Power BI">
+        <img src="images/LATEX.png" alt="LaTeX">
+        <img src="images/VIRTUAL STUDIO.png" alt="Visual Studio">
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+  <section id="projects" class="text-center">
+    <div class="container">
+      <h2>PROJECTS</h2>
+      <div class="project-card mt-4">
+        <img src="images/front 5.jpeg" alt="Anemia Project">
+        <h5>Identifying High-Risk Groups for Anemia in Ghana</h5>
+        <p>This study used cluster analysis in R to identify and characterize groups of women at higher risk of anemia, providing actionable insights for targeted health interventions and policy-making.</p>
+        <a href="file:///D:/WEBSITE/PROJECT/ANEMIA_PROJECT_2024_ORIGINAL%20(1).pdf" class="btn-view" target="_blank">View Project</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="container text-center">
+    <h2><strong>CONTACT</strong></h2>
+    <p class="mb-4">Let’s connect on social platforms or reach out directly!</p>
+
+    <div class="d-flex justify-content-center flex-wrap gap-4">
+      <a href="https://web.facebook.com/amponsah.desmond.96" target="_blank"><img src="images/FACE BOOT.png.png"></a>
+      <a href="https://www.linkedin.com/in/desmond-amponsah-a49728248" target="_blank"><img src="images/LINK.png.png"></a>
+      <a href="https://github.com/AmponsahDesmond-1012" target="_blank"><img src="images/GIT.png.png"></a>
+      <a href="http://www.youtube.com/@mramponsah1012" target="_blank"><img src="images/YOU.png.png"></a>
+    </div>
+
+    <p class="mt-4">
+      <strong>Email:</strong> <a href="mailto:amponsahdesmond1012@gmail.com" style="color:#ffb400;">amponsahdesmond1012@gmail.com</a><br>
+      <strong>Phone:</strong> +233-538-725-962 / +233-592-631-502
+    </p>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 Amponsah Desmond | Data Analyst</p>
+  </footer>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
