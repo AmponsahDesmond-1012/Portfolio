@@ -42,15 +42,17 @@
     .hero {
       padding: 120px 0;
       background: linear-gradient(120deg, #0a192f, #112240);
+    }
+    .hero-container {
       display: flex;
       flex-wrap: wrap;
-      justify-content: center;
       align-items: center;
+      justify-content: center;
+      gap: 40px;
     }
     .hero-content {
       max-width: 600px;
       text-align: center;
-      margin-bottom: 30px;
     }
     .hero h1 {
       font-size: 2.5rem;
@@ -98,7 +100,7 @@
       color: #0a192f;
     }
 
-    /* Data Gallery (smaller images) */
+    /* Data Gallery */
     .data-gallery {
       display: flex;
       flex-wrap: wrap;
@@ -252,22 +254,28 @@
       text-align: center;
     }
 
-    /* Responsive Adjustments */
+    /* Responsive Layout */
     @media (max-width: 992px) {
-      .hero {
-        flex-direction: column-reverse;
-        text-align: center;
-      }
-      .hero-content {
-        margin-bottom: 20px;
+      .hero-container {
+        flex-direction: column;
       }
       .profile-img {
+        order: 1;
         width: 180px;
         height: 180px;
       }
+      .hero-content {
+        order: 2;
+        text-align: center;
+        margin-top: 20px;
+      }
+      .data-gallery {
+        order: 3;
+        margin-top: 25px;
+      }
       .data-gallery img {
-        width: 180px;
-        height: 130px;
+        width: 160px;
+        height: 120px;
       }
     }
 
@@ -283,16 +291,13 @@
         width: 90%;
         margin-bottom: 10px;
       }
-      .project-card {
-        width: 100%;
-      }
       .tool-logos img {
         width: 70px;
         height: 70px;
       }
       .data-gallery img {
-        width: 150px;
-        height: 110px;
+        width: 140px;
+        height: 100px;
       }
     }
   </style>
@@ -315,19 +320,11 @@
         id="navbarNav"
       >
         <ul class="navbar-nav align-items-lg-center">
-          <li class="nav-item">
-            <a class="nav-link active" href="#home">Home</a>
-          </li>
+          <li class="nav-item"><a class="nav-link active" href="#home">Home</a></li>
           <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
-          <li class="nav-item">
-            <a class="nav-link" href="#skills">Skills</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#projects">Projects</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#contact">Contact</a>
-          </li>
+          <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
+          <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
         </ul>
       </div>
     </div>
@@ -335,33 +332,18 @@
 
   <!-- Hero -->
   <section id="home" class="hero mt-5 pt-5">
-    <div
-      class="container d-flex flex-lg-row flex-column align-items-center justify-content-between"
-    >
+    <div class="container hero-container">
+      <img src="images/PROFILE.jpeg" alt="Desmond Photo" class="img-fluid profile-img" />
       <div class="hero-content">
-        <h1>
-          Hi, I'm <span style="color: #ffb400;">Amponsah Desmond</span>
-        </h1>
+        <h1>Hi, I'm <span style="color: #ffb400;">Amponsah Desmond</span></h1>
         <p>
-          A passionate Data Analyst dedicated to transforming complex data into
-          actionable insights, driving informed decisions, and promoting a
-          culture of excellence through analytics and research.
+          A passionate Data Analyst dedicated to transforming complex data into actionable insights, driving informed decisions, and promoting a culture of excellence through analytics and research.
         </p>
         <div>
           <a href="#contact" class="btn btn-primary">Contact Me</a>
-          <a
-            href="files/Desmond_CV.pdf"
-            class="btn-download"
-            download
-            >Download CV</a
-          >
+          <a href="files/Desmond_CV.pdf" class="btn-download" download>Download CV</a>
         </div>
       </div>
-      <img
-        src="images/PROFILE.jpeg"
-        alt="Desmond Photo"
-        class="img-fluid profile-img"
-      />
     </div>
 
     <div class="data-gallery mt-4">
@@ -376,11 +358,7 @@
   <section id="about">
     <h2>ABOUT</h2>
     <p>
-      Dedicated and passionate data analyst and quality-focused professional
-      with a firm belief in the transformative power of data-driven insights. I
-      am committed to empowering organizations and teams with analytical
-      knowledge, problem-solving skills, and ethical values necessary to thrive
-      in a data-centric world.
+      Dedicated and passionate data analyst and quality-focused professional with a firm belief in the transformative power of data-driven insights. I am committed to empowering organizations and teams with analytical knowledge, problem-solving skills, and ethical values necessary to thrive in a data-centric world.
     </p>
   </section>
 
@@ -392,28 +370,19 @@
         <div class="col-md-4">
           <div class="skill-box">
             <h5 style="color: #ffb400;">Data Analysis & Visualization</h5>
-            <p>
-              Proficient in R, STATA, and SPSS for data cleaning, analysis, and
-              visualization.
-            </p>
+            <p>Proficient in R, STATA, and SPSS for data cleaning, analysis, and visualization.</p>
           </div>
         </div>
         <div class="col-md-4">
           <div class="skill-box">
             <h5 style="color: #ffb400;">Statistical Modelling</h5>
-            <p>
-              Experienced in Multivariate and Bayesian Analysis, Biostatistics,
-              and Time Series Modelling.
-            </p>
+            <p>Experienced in Multivariate and Bayesian Analysis, Biostatistics, and Time Series Modelling.</p>
           </div>
         </div>
         <div class="col-md-4">
           <div class="skill-box">
             <h5 style="color: #ffb400;">Tools & Software</h5>
-            <p>
-              RStudio, Microsoft Office Suite, LaTeX, Power BI, SQL, and Visual
-              Studio.
-            </p>
+            <p>RStudio, Microsoft Office Suite, LaTeX, Power BI, SQL, and Visual Studio.</p>
           </div>
         </div>
       </div>
@@ -436,48 +405,24 @@
       <img src="images/front 5.jpeg" alt="Anemia Project" />
       <h5>Identifying High-Risk Groups for Anemia in Ghana</h5>
       <p>
-        This study used cluster analysis in R to identify and characterize
-        groups of women at higher risk of anemia, providing actionable insights
-        for targeted health interventions and policy-making.
+        This study used cluster analysis in R to identify and characterize groups of women at higher risk of anemia, providing actionable insights for targeted health interventions and policy-making.
       </p>
-      <a
-        href="files/ANEMIA_PROJECT.pdf"
-        class="btn-view"
-        target="_blank"
-        >View Project</a
-      >
+      <a href="files/ANEMIA_PROJECT.pdf" class="btn-view" target="_blank">View Project</a>
     </div>
   </section>
 
   <!-- Contact -->
   <section id="contact">
     <h2><strong>CONTACT</strong></h2>
-    <p class="mb-4">
-      Let’s connect on social platforms or reach out directly!
-    </p>
+    <p class="mb-4">Let’s connect on social platforms or reach out directly!</p>
     <div class="d-flex justify-content-center flex-wrap gap-3">
-      <a href="https://web.facebook.com/amponsah.desmond.96" target="_blank"
-        ><img src="images/FACE BOOT.png.png" alt="Facebook"
-      /></a>
-      <a
-        href="https://www.linkedin.com/in/desmond-amponsah-a49728248"
-        target="_blank"
-        ><img src="images/LINK.png.png" alt="LinkedIn"
-      /></a>
-      <a href="https://github.com/AmponsahDesmond-1012" target="_blank"
-        ><img src="images/GIT.png.png" alt="GitHub"
-      /></a>
-      <a href="http://www.youtube.com/@mramponsah1012" target="_blank"
-        ><img src="images/YOU.png.png" alt="YouTube"
-      /></a>
+      <a href="https://web.facebook.com/amponsah.desmond.96" target="_blank"><img src="images/FACE BOOT.png.png" alt="Facebook" /></a>
+      <a href="https://www.linkedin.com/in/desmond-amponsah-a49728248" target="_blank"><img src="images/LINK.png.png" alt="LinkedIn" /></a>
+      <a href="https://github.com/AmponsahDesmond-1012" target="_blank"><img src="images/GIT.png.png" alt="GitHub" /></a>
+      <a href="http://www.youtube.com/@mramponsah1012" target="_blank"><img src="images/YOU.png.png" alt="YouTube" /></a>
     </div>
     <p class="mt-4">
-      <strong>Email:</strong>
-      <a
-        href="mailto:amponsahdesmond1012@gmail.com"
-        style="color: #ffb400"
-        >amponsahdesmond1012@gmail.com</a
-      ><br />
+      <strong>Email:</strong> <a href="mailto:amponsahdesmond1012@gmail.com" style="color: #ffb400">amponsahdesmond1012@gmail.com</a><br />
       <strong>Phone:</strong> +233-538-725-962 / +233-592-631-502
     </p>
   </section>
