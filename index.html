@@ -38,6 +38,21 @@
       color: #ffb400 !important;
     }
 
+    /* Download CV Button in Navbar */
+    .btn-cv {
+      background-color: #ffb400;
+      color: #0a192f;
+      font-weight: 600;
+      border-radius: 25px;
+      padding: 8px 18px;
+      border: none;
+      transition: 0.3s;
+    }
+    .btn-cv:hover {
+      background-color: #d99a00;
+      color: #fff;
+    }
+
     /* Hero Section */
     .hero {
       padding: 120px 0;
@@ -315,22 +330,26 @@
       >
         <span class="navbar-toggler-icon"></span>
       </button>
-      <div
-        class="collapse navbar-collapse justify-content-end"
-        id="navbarNav"
-      >
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
         <ul class="navbar-nav align-items-lg-center">
           <li class="nav-item"><a class="nav-link active" href="#home">Home</a></li>
           <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
           <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
           <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
           <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+          
+          <!-- Download CV Button -->
+          <li class="nav-item ms-lg-3">
+            <a href="PROJECT/ANEMIA_PROJECT_2024_ORIGINAL (1).pdf" class="btn btn-cv" download>
+              Download CV
+            </a>
+          </li>
         </ul>
       </div>
     </div>
   </nav>
 
-  <!-- Hero -->
+  <!-- Hero Section -->
   <section id="home" class="hero mt-5 pt-5">
     <div class="container hero-container">
       <img src="images/PROFILE.jpeg" alt="Desmond Photo" class="img-fluid profile-img" />
@@ -341,7 +360,7 @@
         </p>
         <div>
           <a href="#contact" class="btn btn-primary">Contact Me</a>
-          <a href="files/Desmond_CV.pdf" class="btn-download" download>Download CV</a>
+          
         </div>
       </div>
     </div>
