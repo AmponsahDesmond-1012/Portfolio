@@ -12,9 +12,9 @@
 
 <body>
   <!-- Navbar -->
-  <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm fixed-top">
+  <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm fixed-top", style="background-color:#800080;">
     <div class="container">
-      <a class="navbar-brand fw-bold" href="#home" style="color:#800020;">Amponsah Desmond</a>
+      <a class="navbar-brand fw-bold" href="#home" style="color:#420222ff;">Amponsah Desmond</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -23,8 +23,12 @@
           <li class="nav-item"><a class="nav-link active" href="#home">Home</a></li>
           <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
           <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
-          <li class="nav-item"><a class="nav-link" href="#expertise">Research</a></li>
+          <li class="nav-item"><a class="nav-link" href="#expertise">Research Interest</a></li>
+          <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
           <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+          <li class="nav-item">
+            <a class="btn btn-light btn-sm ms-2" href="d:\WEBSITE\PROJECT\AMPONSAH DESMOND CV.pdf" download>Download CV</a>
+          </li>
         </ul>
       </div>
     </div>
@@ -58,7 +62,10 @@
           <img src="images/PROFILE.jpeg" alt="Amponsah Desmond" class="img-fluid rounded-circle shadow about-img">
         </div>
         <div class="col-md-7 about-text text-start">
-          <h2 class="about-title text-center mb-4">About Me</h2>
+          <h2 class="about-title text-center mb-4 position-relative d-inline-block">
+  About Me
+  <span class="underline"></span>
+</h2>
           <p class="text-center">
             I’m <strong>Amponsah Desmond</strong>, a dedicated <em>Data Analyst</em> passionate about uncovering the stories hidden within data. With a Bachelor of Science in Statistics from <strong>Kwame Nkrumah University of Science and Technology (KNUST)</strong>, I bring both technical expertise and analytical curiosity to every project I undertake.
           </p>
@@ -146,7 +153,23 @@
       </div>
     </div>
   </section>
+  <!-- Projects Section -->
+  <section id="projects" class="py-5 bg-light section hidden text-center">
+    <div class="container">
+      <h2 class="fw-bold mb-4" style="color:#800020;">Research & Projects</h2>
+      <p class="mb-5"></p>
 
+      <div class="card mx-auto shadow-sm" style="max-width: 400px; border: none;">
+        <div class="card-body text-start">
+          <h4 class="fw-bold">Identifying High-Risk Groups for Anemia Among Women of Reproductive Age in Ghana</h4>
+          <p class="card-text">
+            This project applies cluster analysis techniques to the Ghana Demographic and Health Survey data to identify patterns and high-risk groups for anemia among women of reproductive age.
+          </p>
+          <a href="d:\WEBSITE\PROJECT\ANEMIA_PROJECT_2024_ORIGINAL (1).pdf" class="btn btn-primary" style="background-color:#800020; border:none;">View Project</a>
+        </div>
+      </div>
+    </div>
+  </section>
   <!-- Contact Section -->
   <section id="contact" class="py-5 bg-light section hidden text-center">
     <div class="container">
@@ -262,9 +285,23 @@
     .expertise-item{opacity:0;transform:translateY(30px);transition:all 1s ease-in-out;}
     .expertise-item.visible{opacity:1;transform:translateY(0);}
     .progress-bar{transition:width 1.2s ease-in-out;}
-    .contact-card{transition:transform 1s ease,opacity 1s ease;}
+    .contact-card{transition:transform 0.5s ease,opacity 0.5s ease;}
     .fade-up{opacity:0;transform:translateY(40px);}
     .fade-up.visible{opacity:1;transform:translateY(0);}
+    .about-title {
+  color: #800020;
+  font-weight: 700;
+}
+
+.about-title .underline {
+  display: block;
+  width: 100px;
+  height: 4px;
+  background-color: #800020;
+  margin: 8px auto 0;
+  border-radius: 2px;
+}
+
   </style>
 
   <!-- Script -->
